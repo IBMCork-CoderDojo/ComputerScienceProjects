@@ -1,0 +1,28 @@
+public class Exercise1{
+    public static void main(String[] args){
+
+        System.out.println("Time to run: " + Benchmark.milliTimeToRun(() ->{
+            for(int i = 0; i < 100000; i++){
+                testAnagram("This sentence is an anagram of the other sentence", "This sentence is an anagram of the other sentence");
+            }
+        }));
+    }
+
+    /**
+     * Tests if word1 and word2 are anagrams using the checkoff method.
+     */
+    public static boolean testAnagram(String word1, String word2){
+        if(word1.length() != word2.length()){
+            return false;
+        }
+
+        char[] chars1 = word1.toCharArray();
+        char[] chars2 = word1.toCharArray();
+
+        for(int i = 0; i < chars1.length; i++){
+            word2 = word2.replaceFirst(String.valueOf(chars2[i]), "");
+        }
+
+        return word2.equals("");
+    }
+}
