@@ -1,6 +1,3 @@
-package sample.network.Exercises;
-
-import sample.network.debug.Benchmark;
 
 /**
  * Exercise 1:
